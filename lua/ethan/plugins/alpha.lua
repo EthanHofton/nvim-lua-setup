@@ -25,6 +25,57 @@ dashboard.section.buttons.val = {
 	dashboard.button("q", "󰅚  Quit", ":qa<CR>"),
 }
 
+local function session_button(text, file)
+	return {
+		type = "button",
+		val = "  " .. text,
+		on_press = function()
+			vim.cmd("source " .. vim.fn.fnameescape(file))
+		end,
+		opts = {
+			position = "center",
+			shortcut = "",
+			cursor = 3,
+			width = 50,
+			align_shortcut = "right",
+			hl = "AlphaButtons",
+		},
+	}
+end
+
+local function get_sessions()
+	local session_dir = vim.fn.stdpath("data") .. "/sessions/"
+	local files = vim.fn.glob(session_dir .. "*.vim", false, true)
+
+	if #files == 0 then
+		return { { type = "text", val = "  No saved sessions", opts = { hl = "Comment", position = "center" } } }
+	end
+
+	table.sort(files, function(a, b)
+		return vim.fn.getftime(a) > vim.fn.getftime(b)
+	end)
+
+	local items = {}
+	for i, file in ipairs(files) do
+		if i > 5 then break end
+		local encoded = vim.fn.fnamemodify(file, ":t:r")
+		local dir = encoded:gsub("%%", "/")
+		local name = vim.fn.fnamemodify(dir, ":t")
+		table.insert(items, session_button(name, file))
+	end
+
+	return items
+end
+
+local recent_sessions_section = {
+	type = "group",
+	val = {
+		{ type = "text", val = "─── Recent Sessions ───", opts = { hl = "AlphaHeader", position = "center" } },
+		{ type = "group", val = get_sessions, opts = { spacing = 0 } },
+	},
+	opts = { spacing = 1 },
+}
+
 local function get_recent_files()
 	local oldfiles = vim.v.oldfiles or {}
 	local items = {}
@@ -87,6 +138,8 @@ alpha.setup({
 		dashboard.section.header,
 		{ type = "padding", val = 2 },
 		dashboard.section.buttons,
+		{ type = "padding", val = 1 },
+		recent_sessions_section,
 		{ type = "padding", val = 1 },
 		recent_files_section,
 		{ type = "padding", val = 1 },

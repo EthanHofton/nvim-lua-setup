@@ -31,6 +31,7 @@ require("lazy").setup({
 	"MunifTanjim/nui.nvim",
 	"aznhe21/actions-preview.nvim",
 	"goolord/alpha-nvim",
+	"rmagatti/auto-session",
 
 	-- LSP
 	"mason-org/mason.nvim",
