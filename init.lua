@@ -6,6 +6,7 @@ require("ethan.core.options")
 require("ethan.core.keymaps")
 require("ethan.core.colorscheme")
 
+require("ethan.plugins.alpha")
 require("ethan.plugins.actions-preview")
 require("ethan.plugins.nvim-tree")
 require("ethan.plugins.comment")

@@ -30,6 +30,7 @@ require("lazy").setup({
 	-- UI
 	"MunifTanjim/nui.nvim",
 	"aznhe21/actions-preview.nvim",
+	"goolord/alpha-nvim",
 
 	-- LSP
 	"mason-org/mason.nvim",
