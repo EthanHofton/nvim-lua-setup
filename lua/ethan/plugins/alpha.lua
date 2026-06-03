@@ -109,7 +109,7 @@ local recent_files_section = {
 }
 
 local function get_cowsay()
-	local fortune = vim.fn.system("fortune -s 2>/dev/null | cowsay 2>/dev/null")
+	local fortune = vim.fn.system("fortune -s 2>/dev/null | cowsay -r 2>/dev/null")
 	if vim.v.shell_error ~= 0 or fortune == "" then
 		return { "  Stay curious." }
 	end

@@ -1,0 +1,627 @@
+[metadata]
+desc = "General Vim reference — motions, operators, text objects, modes"
+
+# ── Navigation ────────────────────────────────────────────────────────────────
+
+[[entries]]
+group = "navigation"
+description = "Move cursor one character to the left"
+command = "h"
+
+[[entries]]
+group = "navigation"
+description = "Move cursor one line down"
+command = "j"
+
+[[entries]]
+group = "navigation"
+description = "Move cursor one line up"
+command = "k"
+
+[[entries]]
+group = "navigation"
+description = "Move cursor one character to the right"
+command = "l"
+
+[[entries]]
+group = "navigation"
+description = "Jump forward to the start of the next word"
+command = "w"
+
+[[entries]]
+group = "navigation"
+description = "Jump to the end of the current or next word"
+command = "e"
+
+[[entries]]
+group = "navigation"
+description = "Jump backward to the start of the previous word"
+command = "b"
+
+[[entries]]
+group = "navigation"
+description = "Jump to the next WORD forward, treating punctuation as part of the word"
+command = "W"
+
+[[entries]]
+group = "navigation"
+description = "Jump to the end of the next WORD, ignoring punctuation boundaries"
+command = "E"
+
+[[entries]]
+group = "navigation"
+description = "Jump backward to the previous WORD, ignoring punctuation boundaries"
+command = "B"
+
+[[entries]]
+group = "navigation"
+description = "Jump to column zero, the absolute start of the line"
+command = "0"
+
+[[entries]]
+group = "navigation"
+description = "Jump to the first non-whitespace character on the current line"
+command = "^"
+
+[[entries]]
+group = "navigation"
+description = "Jump to the last character on the current line"
+command = "$"
+
+[[entries]]
+group = "navigation"
+description = "Jump to the very first line of the file"
+command = "gg"
+
+[[entries]]
+group = "navigation"
+description = "Jump to the very last line of the file"
+command = "G"
+
+[[entries]]
+group = "navigation"
+description = "Jump directly to a specific line number"
+command = "<N>G"
+placeholders = [
+  { name = "N", description = "Line number to jump to" },
+]
+
+[[entries]]
+group = "navigation"
+description = "Jump between matching brackets, parentheses, or braces"
+command = "%"
+
+[[entries]]
+group = "navigation"
+description = "Scroll down half a screen keeping cursor in context"
+command = "Ctrl-d"
+
+[[entries]]
+group = "navigation"
+description = "Scroll up half a screen keeping cursor in context"
+command = "Ctrl-u"
+
+[[entries]]
+group = "navigation"
+description = "Scroll down a full page"
+command = "Ctrl-f"
+
+[[entries]]
+group = "navigation"
+description = "Scroll up a full page"
+command = "Ctrl-b"
+
+[[entries]]
+group = "navigation"
+description = "Scroll the view so the cursor line is vertically centered"
+command = "zz"
+
+[[entries]]
+group = "navigation"
+description = "Go back to the previous cursor position in the jump list"
+command = "Ctrl-o"
+
+[[entries]]
+group = "navigation"
+description = "Go forward to a more recent cursor position in the jump list"
+command = "Ctrl-i"
+
+[[entries]]
+group = "navigation"
+description = "Move cursor to the next occurrence of a character on this line"
+command = "f<char>"
+placeholders = [
+  { name = "char", description = "Character to jump to" },
+]
+
+[[entries]]
+group = "navigation"
+description = "Move cursor to just before the next occurrence of a character"
+command = "t<char>"
+placeholders = [
+  { name = "char", description = "Character to jump before" },
+]
+
+[[entries]]
+group = "navigation"
+description = "Repeat the last f/t/F/T character find in the same direction"
+command = ";"
+
+[[entries]]
+group = "navigation"
+description = "Repeat the last f/t/F/T character find in the opposite direction"
+command = ","
+
+# ── Editing ───────────────────────────────────────────────────────────────────
+
+[[entries]]
+group = "editing"
+description = "Enter insert mode and start typing at the cursor position"
+command = "i"
+
+[[entries]]
+group = "editing"
+description = "Enter insert mode and start typing one position after the cursor"
+command = "a"
+
+[[entries]]
+group = "editing"
+description = "Move to the start of the line and enter insert mode"
+command = "I"
+
+[[entries]]
+group = "editing"
+description = "Move to the end of the line and enter insert mode"
+command = "A"
+
+[[entries]]
+group = "editing"
+description = "Insert a blank line below the current line and start editing"
+command = "o"
+
+[[entries]]
+group = "editing"
+description = "Insert a blank line above the current line and start editing"
+command = "O"
+
+[[entries]]
+group = "editing"
+description = "Overwrite a single character without entering insert mode"
+command = "r<char>"
+placeholders = [
+  { name = "char", description = "Replacement character" },
+]
+
+[[entries]]
+group = "editing"
+description = "Enter replace mode to overwrite characters continuously as you type"
+command = "R"
+
+[[entries]]
+group = "editing"
+description = "Remove the character at the cursor position"
+command = "x"
+
+[[entries]]
+group = "editing"
+description = "Remove the character to the left of the cursor"
+command = "X"
+
+[[entries]]
+group = "editing"
+description = "Delete from the cursor to the end of the line"
+command = "D"
+
+[[entries]]
+group = "editing"
+description = "Delete to end of line and enter insert mode"
+command = "C"
+
+[[entries]]
+group = "editing"
+description = "Copy the entire current line into the default register"
+command = "yy"
+
+[[entries]]
+group = "editing"
+description = "Cut the entire current line into the default register"
+command = "dd"
+
+[[entries]]
+group = "editing"
+description = "Paste register contents after the cursor or below the current line"
+command = "p"
+
+[[entries]]
+group = "editing"
+description = "Paste register contents before the cursor or above the current line"
+command = "P"
+
+[[entries]]
+group = "editing"
+description = "Undo the last change"
+command = "u"
+
+[[entries]]
+group = "editing"
+description = "Redo an undone change"
+command = "Ctrl-r"
+
+[[entries]]
+group = "editing"
+description = "Merge the line below onto the end of the current line"
+command = "J"
+
+[[entries]]
+group = "editing"
+description = "Flip the character under the cursor between upper and lowercase"
+command = "~"
+
+[[entries]]
+group = "editing"
+description = "Shift the current line one indent level to the right"
+command = ">>"
+
+[[entries]]
+group = "editing"
+description = "Shift the current line one indent level to the left"
+command = "<<"
+
+[[entries]]
+group = "editing"
+description = "Replay the most recent edit operation"
+command = "."
+
+# ── Operators + Motions ───────────────────────────────────────────────────────
+
+[[entries]]
+group = "operators"
+description = "Delete text covered by a motion or text object"
+command = "d<motion>"
+placeholders = [
+  { name = "motion", description = "Vim motion or text object (e.g. w, $, ip)" },
+]
+
+[[entries]]
+group = "operators"
+description = "Delete text covered by a motion and immediately enter insert mode"
+command = "c<motion>"
+placeholders = [
+  { name = "motion", description = "Vim motion or text object" },
+]
+
+[[entries]]
+group = "operators"
+description = "Copy text covered by a motion into the default register"
+command = "y<motion>"
+placeholders = [
+  { name = "motion", description = "Vim motion or text object" },
+]
+
+[[entries]]
+group = "operators"
+description = "Shift text covered by a motion right by one indent level"
+command = "><motion>"
+placeholders = [
+  { name = "motion", description = "Vim motion or text object" },
+]
+
+[[entries]]
+group = "operators"
+description = "Shift text covered by a motion left by one indent level"
+command = "<<motion>"
+placeholders = [
+  { name = "motion", description = "Vim motion or text object" },
+]
+
+# ── Text Objects ──────────────────────────────────────────────────────────────
+
+[[entries]]
+group = "text-objects"
+description = "Select the current word, excluding surrounding whitespace"
+command = "iw  (use with operator)"
+
+[[entries]]
+group = "text-objects"
+description = "Select the current word including one surrounding space"
+command = "aw  (use with operator)"
+
+[[entries]]
+group = "text-objects"
+description = "Select the current paragraph body without surrounding blank lines"
+command = "ip  (use with operator)"
+
+[[entries]]
+group = "text-objects"
+description = "Select the current paragraph including surrounding blank lines"
+command = "ap  (use with operator)"
+
+[[entries]]
+group = "text-objects"
+description = "Select content inside parentheses, excluding the parens"
+command = "i(  or  ib  (use with operator)"
+
+[[entries]]
+group = "text-objects"
+description = "Select content inside parentheses, including the parens"
+command = "a(  or  ab  (use with operator)"
+
+[[entries]]
+group = "text-objects"
+description = "Select content inside curly braces, excluding the braces"
+command = "i{  or  iB  (use with operator)"
+
+[[entries]]
+group = "text-objects"
+description = "Select content inside curly braces, including the braces"
+command = "a{  or  aB  (use with operator)"
+
+[[entries]]
+group = "text-objects"
+description = "Select content inside square brackets, excluding the brackets"
+command = "i[  (use with operator)"
+
+[[entries]]
+group = "text-objects"
+description = "Select content inside angle brackets, excluding the brackets"
+command = "i<  (use with operator)"
+
+[[entries]]
+group = "text-objects"
+description = "Select text inside double quotes, excluding the quotes"
+command = "i\"  (use with operator)"
+
+[[entries]]
+group = "text-objects"
+description = "Select text inside single quotes, excluding the quotes"
+command = "i'  (use with operator)"
+
+[[entries]]
+group = "text-objects"
+description = "Select text inside backticks, excluding the backticks"
+command = "i`  (use with operator)"
+
+# ── Visual Mode ───────────────────────────────────────────────────────────────
+
+[[entries]]
+group = "visual"
+description = "Start a character-wise visual selection"
+command = "v"
+
+[[entries]]
+group = "visual"
+description = "Start a line-wise visual selection for whole lines"
+command = "V"
+
+[[entries]]
+group = "visual"
+description = "Start a block-wise rectangular column selection"
+command = "Ctrl-v"
+
+[[entries]]
+group = "visual"
+description = "Restore and reselect the previous visual selection"
+command = "gv"
+
+[[entries]]
+group = "visual"
+description = "Move the cursor to the other end of the visual selection"
+command = "o"
+
+# ── Search ────────────────────────────────────────────────────────────────────
+
+[[entries]]
+group = "search"
+description = "Open the search prompt and find text forward in the buffer"
+command = "/<pattern>"
+placeholders = [
+  { name = "pattern", description = "Search pattern (supports regex)" },
+]
+
+[[entries]]
+group = "search"
+description = "Open the search prompt and find text backward in the buffer"
+command = "?<pattern>"
+placeholders = [
+  { name = "pattern", description = "Search pattern (supports regex)" },
+]
+
+[[entries]]
+group = "search"
+description = "Jump to the next search match"
+command = "n"
+
+[[entries]]
+group = "search"
+description = "Jump to the previous search match"
+command = "N"
+
+[[entries]]
+group = "search"
+description = "Search forward for the exact word under the cursor"
+command = "*"
+
+[[entries]]
+group = "search"
+description = "Search backward for the exact word under the cursor"
+command = "#"
+
+# ── Substitution ──────────────────────────────────────────────────────────────
+
+[[entries]]
+group = "substitution"
+description = "Replace the first occurrence of a pattern on the current line"
+command = ":s/<old>/<new>/"
+placeholders = [
+  { name = "old", description = "Pattern to replace" },
+  { name = "new", description = "Replacement text" },
+]
+
+[[entries]]
+group = "substitution"
+description = "Replace all occurrences of a pattern on the current line"
+command = ":s/<old>/<new>/g"
+placeholders = [
+  { name = "old", description = "Pattern to replace" },
+  { name = "new", description = "Replacement text" },
+]
+
+[[entries]]
+group = "substitution"
+description = "Global find and replace throughout the entire file"
+command = ":%s/<old>/<new>/g"
+placeholders = [
+  { name = "old", description = "Pattern to replace" },
+  { name = "new", description = "Replacement text" },
+]
+
+[[entries]]
+group = "substitution"
+description = "Global find and replace with a confirmation prompt for each match"
+command = ":%s/<old>/<new>/gc"
+placeholders = [
+  { name = "old", description = "Pattern to replace" },
+  { name = "new", description = "Replacement text" },
+]
+
+# ── Marks ─────────────────────────────────────────────────────────────────────
+
+[[entries]]
+group = "marks"
+description = "Save the current cursor position as a named bookmark"
+command = "m<letter>"
+placeholders = [
+  { name = "letter", description = "Mark name: a-z for buffer-local, A-Z for global" },
+]
+
+[[entries]]
+group = "marks"
+description = "Jump to the line where a named mark was set"
+command = "'<letter>"
+placeholders = [
+  { name = "letter", description = "Mark name" },
+]
+
+[[entries]]
+group = "marks"
+description = "Jump to the exact line and column where a named mark was set"
+command = "`<letter>"
+placeholders = [
+  { name = "letter", description = "Mark name" },
+]
+
+# ── Registers ─────────────────────────────────────────────────────────────────
+
+[[entries]]
+group = "registers"
+description = "Copy text into a specific named register for later use"
+command = "\"<reg>y<motion>"
+placeholders = [
+  { name = "reg", description = "Register name (a-z)" },
+  { name = "motion", description = "Vim motion or text object" },
+]
+
+[[entries]]
+group = "registers"
+description = "Paste text from a specific named or special register"
+command = "\"<reg>p"
+placeholders = [
+  { name = "reg", description = "Register name (a-z, +, *, 0, etc.)" },
+]
+
+[[entries]]
+group = "registers"
+description = "List the contents of all named and special registers"
+command = ":reg"
+
+[[entries]]
+group = "registers"
+description = "Copy text into the system clipboard via the + register"
+command = "\"+y<motion>"
+placeholders = [
+  { name = "motion", description = "Vim motion or text object" },
+]
+
+[[entries]]
+group = "registers"
+description = "Paste text from the OS system clipboard"
+command = "\"+p"
+
+# ── Macros ────────────────────────────────────────────────────────────────────
+
+[[entries]]
+group = "macros"
+description = "Begin recording keystrokes as a reusable macro into a register"
+command = "q<reg>"
+placeholders = [
+  { name = "reg", description = "Register name (a-z) to store the macro" },
+]
+
+[[entries]]
+group = "macros"
+description = "Stop recording and save the current macro"
+command = "q"
+
+[[entries]]
+group = "macros"
+description = "Execute a recorded macro stored in a register"
+command = "@<reg>"
+placeholders = [
+  { name = "reg", description = "Register name containing the macro" },
+]
+
+[[entries]]
+group = "macros"
+description = "Replay the most recently executed macro"
+command = "@@"
+
+# ── Command Line ──────────────────────────────────────────────────────────────
+
+[[entries]]
+group = "command-line"
+description = "Write the current buffer to disk"
+command = ":w"
+
+[[entries]]
+group = "command-line"
+description = "Write the current buffer to a different file path"
+command = ":w <filename>"
+placeholders = [
+  { name = "filename", description = "Target file path" },
+]
+
+[[entries]]
+group = "command-line"
+description = "Close the current window or exit Vim"
+command = ":q"
+
+[[entries]]
+group = "command-line"
+description = "Force quit discarding any unsaved changes"
+command = ":q!"
+
+[[entries]]
+group = "command-line"
+description = "Write the buffer to disk and exit Vim"
+command = ":wq  or  ZZ"
+
+[[entries]]
+group = "command-line"
+description = "Open and edit a file by path in the current buffer"
+command = ":e <filename>"
+placeholders = [
+  { name = "filename", description = "File path to open" },
+]
+
+[[entries]]
+group = "command-line"
+description = "Enable line number display in the gutter"
+command = ":set number"
+
+[[entries]]
+group = "command-line"
+description = "Execute a shell command without leaving Vim"
+command = ":!<cmd>"
+placeholders = [
+  { name = "cmd", description = "Shell command to run" },
+]

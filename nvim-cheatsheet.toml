@@ -1,0 +1,353 @@
+[metadata]
+desc = "Neovim keybinding reference — Ethan's config"
+
+[params]
+leader = "Space"
+
+# ── General ───────────────────────────────────────────────────────────────────
+
+[[entries]]
+group = "general"
+description = "Return to normal mode from insert mode"
+command = "jk"
+
+[[entries]]
+group = "general"
+description = "Remove highlight from last search results"
+command = "{leader} nh"
+
+[[entries]]
+group = "general"
+description = "Delete character without overwriting the yank register"
+command = "x"
+
+[[entries]]
+group = "general"
+description = "Increase the number under the cursor by one"
+command = "{leader} +"
+
+[[entries]]
+group = "general"
+description = "Decrease the number under the cursor by one"
+command = "{leader} _"
+
+# ── Window Splits ─────────────────────────────────────────────────────────────
+
+[[entries]]
+group = "splits"
+description = "Open a new vertical split pane side by side"
+command = "{leader} |"
+
+[[entries]]
+group = "splits"
+description = "Open a new horizontal split pane above and below"
+command = "{leader} -"
+
+[[entries]]
+group = "splits"
+description = "Make all open split windows the same size"
+command = "{leader} se"
+
+[[entries]]
+group = "splits"
+description = "Close and remove the current split window"
+command = "{leader} sx"
+
+[[entries]]
+group = "splits"
+description = "Toggle zoom to maximize or restore the current split"
+command = "{leader} sm"
+
+# ── Tmux Navigator ────────────────────────────────────────────────────────────
+
+[[entries]]
+group = "splits"
+description = "Move focus to the left split or tmux pane"
+command = "Ctrl-h"
+
+[[entries]]
+group = "splits"
+description = "Move focus to the lower split or tmux pane"
+command = "Ctrl-j"
+
+[[entries]]
+group = "splits"
+description = "Move focus to the upper split or tmux pane"
+command = "Ctrl-k"
+
+[[entries]]
+group = "splits"
+description = "Move focus to the right split or tmux pane"
+command = "Ctrl-l"
+
+# ── Tabs ──────────────────────────────────────────────────────────────────────
+
+[[entries]]
+group = "tabs"
+description = "Create a new editor tab"
+command = "{leader} to"
+
+[[entries]]
+group = "tabs"
+description = "Close the current active tab"
+command = "{leader} tx"
+
+[[entries]]
+group = "tabs"
+description = "Switch to the next tab to the right"
+command = "{leader} tn"
+
+[[entries]]
+group = "tabs"
+description = "Switch to the previous tab to the left"
+command = "{leader} tp"
+
+# ── File Explorer (nvim-tree) ─────────────────────────────────────────────────
+
+[[entries]]
+group = "file-explorer"
+description = "Open or close the nvim-tree file explorer sidebar"
+command = "{leader} e"
+
+# ── Telescope ─────────────────────────────────────────────────────────────────
+
+[[entries]]
+group = "telescope"
+description = "Fuzzy find and open files by name across the project"
+command = "{leader} ff"
+
+[[entries]]
+group = "telescope"
+description = "Search for text across all project files with live grep"
+command = "{leader} fs"
+
+[[entries]]
+group = "telescope"
+description = "Search for the word currently under the cursor"
+command = "{leader} fc"
+
+[[entries]]
+group = "telescope"
+description = "Browse and switch between open buffers"
+command = "{leader} fb"
+
+[[entries]]
+group = "telescope"
+description = "Search Neovim help documentation with Telescope"
+command = "{leader} fh"
+
+[[entries]]
+group = "telescope"
+description = "Move to the previous result in the Telescope picker"
+command = "Ctrl-p"
+
+[[entries]]
+group = "telescope"
+description = "Move to the next result in the Telescope picker"
+command = "Ctrl-n"
+
+[[entries]]
+group = "telescope"
+description = "Send selected Telescope results to the quickfix list"
+command = "Ctrl-q"
+
+# ── LSP ───────────────────────────────────────────────────────────────────────
+
+[[entries]]
+group = "lsp"
+description = "Jump to the symbol's declaration via LSP"
+command = "gD"
+
+[[entries]]
+group = "lsp"
+description = "Jump to where a function or variable is defined"
+command = "gd"
+
+[[entries]]
+group = "lsp"
+description = "Jump to the interface implementation via LSP"
+command = "gi"
+
+[[entries]]
+group = "lsp"
+description = "List all usages and references of the symbol under cursor"
+command = "gr"
+
+[[entries]]
+group = "lsp"
+description = "Show inline documentation popup for symbol under cursor"
+command = "K"
+
+[[entries]]
+group = "lsp"
+description = "Rename a symbol across the whole project via LSP"
+command = "{leader} rn"
+
+[[entries]]
+group = "lsp"
+description = "Show available code actions and quick fixes via LSP"
+command = "{leader} ca"
+
+[[entries]]
+group = "lsp"
+description = "Alternate shortcut for LSP code actions preview"
+command = "{leader} ."
+
+[[entries]]
+group = "lsp"
+description = "Jump to the type definition of the symbol under cursor"
+command = "{leader} D"
+
+[[entries]]
+group = "lsp"
+description = "Show diagnostic error or warning details in a popup"
+command = "{leader} d"
+
+[[entries]]
+group = "lsp"
+description = "Jump to the previous LSP diagnostic in the buffer"
+command = "[d"
+
+[[entries]]
+group = "lsp"
+description = "Jump to the next LSP diagnostic in the buffer"
+command = "]d"
+
+# ── Completion (nvim-cmp) ─────────────────────────────────────────────────────
+
+[[entries]]
+group = "completion"
+description = "Move up to the previous autocomplete suggestion"
+command = "Ctrl-k"
+
+[[entries]]
+group = "completion"
+description = "Move down to the next autocomplete suggestion"
+command = "Ctrl-j"
+
+[[entries]]
+group = "completion"
+description = "Scroll up in the completion documentation popup"
+command = "Ctrl-b"
+
+[[entries]]
+group = "completion"
+description = "Scroll down in the completion documentation popup"
+command = "Ctrl-f"
+
+[[entries]]
+group = "completion"
+description = "Manually open the autocomplete suggestion menu"
+command = "Ctrl-Space"
+
+[[entries]]
+group = "completion"
+description = "Dismiss and close the completion popup without confirming"
+command = "Ctrl-e"
+
+[[entries]]
+group = "completion"
+description = "Accept the currently highlighted completion suggestion"
+command = "Enter"
+
+# ── Formatting ────────────────────────────────────────────────────────────────
+
+[[entries]]
+group = "formatting"
+description = "Auto-format the current buffer or visual selection using conform.nvim"
+command = "{leader} mp"
+
+# ── Comments (Comment.nvim) ───────────────────────────────────────────────────
+
+[[entries]]
+group = "comments"
+description = "Comment or uncomment the current line"
+command = "gcc"
+
+[[entries]]
+group = "comments"
+description = "Comment or uncomment lines covered by a motion or visual selection"
+command = "gc<motion>"
+placeholders = [
+  { name = "motion", description = "Vim motion (e.g. j, ip, 3j)" },
+]
+
+[[entries]]
+group = "comments"
+description = "Wrap the current line in a block comment"
+command = "gbc"
+
+[[entries]]
+group = "comments"
+description = "Wrap lines covered by a motion in a block comment"
+command = "gb<motion>"
+placeholders = [
+  { name = "motion", description = "Vim motion (e.g. j, ip, 3j)" },
+]
+
+# ── Surround (vim-surround) ───────────────────────────────────────────────────
+
+[[entries]]
+group = "surround"
+description = "Wrap a text object or motion with a surrounding character"
+command = "ys<motion><char>"
+placeholders = [
+  { name = "motion", description = "Vim motion (e.g. w, ip)" },
+  { name = "char", description = "Surrounding char (e.g. (, [, {, \", ')" },
+]
+
+[[entries]]
+group = "surround"
+description = "Replace an existing surrounding bracket, quote, or tag with a new one"
+command = "cs<old><new>"
+placeholders = [
+  { name = "old", description = "Existing surrounding char to replace" },
+  { name = "new", description = "New surrounding char" },
+]
+
+[[entries]]
+group = "surround"
+description = "Remove surrounding brackets, quotes, or tags entirely"
+command = "ds<char>"
+placeholders = [
+  { name = "char", description = "Surrounding char to delete (e.g. (, [, \")" },
+]
+
+# ── Python ────────────────────────────────────────────────────────────────────
+
+[[entries]]
+group = "python"
+description = "Pick and activate a Python virtual environment for the project"
+command = "{leader} cv"
+
+[[entries]]
+group = "python"
+description = "Re-activate the previously selected Python virtual environment"
+command = "{leader} cV"
+
+# ── Dashboard (Alpha) ─────────────────────────────────────────────────────────
+
+[[entries]]
+group = "dashboard"
+description = "Create a new empty buffer from the welcome dashboard"
+command = "n"
+
+[[entries]]
+group = "dashboard"
+description = "Open Telescope file finder from the welcome dashboard"
+command = "f"
+
+[[entries]]
+group = "dashboard"
+description = "Browse recently opened files from the dashboard"
+command = "r"
+
+[[entries]]
+group = "dashboard"
+description = "Search project text with live grep from the dashboard"
+command = "g"
+
+[[entries]]
+group = "dashboard"
+description = "Quit and exit Neovim from the dashboard"
+command = "q"

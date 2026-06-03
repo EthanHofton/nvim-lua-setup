@@ -40,7 +40,10 @@ require("lazy").setup({
 	"neovim/nvim-lspconfig",
 
 	-- Formatting
-	"stevearc/conform.nvim",
+	{
+		"stevearc/conform.nvim",
+		lazy = false,
+	},
 
 	-- Autocompletion
 	"hrsh7th/nvim-cmp",

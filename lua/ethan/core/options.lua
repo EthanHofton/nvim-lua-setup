@@ -37,6 +37,13 @@ opt.splitbelow = true
 
 opt.iskeyword:append("-")
 
+-- swap & auto-reload
+opt.swapfile = false
+opt.autoread = true
+vim.api.nvim_create_autocmd({ "FocusGained", "BufEnter", "CursorHold", "CursorHoldI" }, {
+	command = "checktime",
+})
+
 -- Diagnostics
 vim.diagnostic.config({
 	float = {
